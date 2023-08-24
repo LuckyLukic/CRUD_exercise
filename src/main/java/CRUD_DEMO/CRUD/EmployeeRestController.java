@@ -1,28 +1,31 @@
-package REST;
+package CRUD_DEMO.CRUD;
+
 
 import java.util.List;
 
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import CRUD_DEMO.CRUD.DAO.EmployeeDAO;
-import CRUD_DEMO.CRUD.Entity.Employee;
 
+@ComponentScan
 @RestController
 @RequestMapping("/api")
 public class EmployeeRestController {
 	
-	private EmployeeDAO employeeDAO;
+
+	private EmployeeService employeeService;
 	
-	public EmployeeRestController (EmployeeDAO theEmployeeDAO) {
+	public EmployeeRestController (EmployeeService theEmployeeService) {
 		
-		employeeDAO = theEmployeeDAO;
-	}
+		employeeService = theEmployeeService;
+	} 
+	
 	
 	@GetMapping("/employees")
 			public List<Employee> findAll() {
-				return employeeDAO.findall();
+				return employeeService.findAll();
 			}
 
 }
