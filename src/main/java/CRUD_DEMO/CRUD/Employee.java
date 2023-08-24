@@ -28,15 +28,15 @@ public class Employee {
 	private String firstName;
 	
 	@Column(name="last_name")
-	private String lastname;
+	private String lastName;
 	
 	@Column(name="email")
 	private String email;
 
-	public Employee(String firstName, String lastname, String email) {
+	public Employee(String firstName, String lastName, String email) {
 	
 		this.firstName = firstName;
-		this.lastname = lastname;
+		this.lastName = lastName;
 		this.email = email;
 	}
 	

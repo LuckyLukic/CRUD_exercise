@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class EmployeeServiceImpl implements EmployeeService{
@@ -22,5 +23,27 @@ public class EmployeeServiceImpl implements EmployeeService{
 	
 		return employeeDAO.findAll();
 	}
+
+	@Override
+	@Transactional
+	public Employee save(Employee theEmployee) {
+		
+		return employeeDAO.save(theEmployee);
+	}
+
+	@Override
+	public Employee findById(int theId) {
+		
+		return employeeDAO.findById(theId);
+	}
+
+	@Override
+	@Transactional
+	public void deleteById(int theId) {
+		employeeDAO.deleteById(theId);
+		
+	}
+	
+	
 
 }
