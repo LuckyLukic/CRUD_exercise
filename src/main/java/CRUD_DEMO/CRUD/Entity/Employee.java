@@ -1,4 +1,4 @@
-package CRUD_DEMO.CRUD;
+package CRUD_DEMO.CRUD.Entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

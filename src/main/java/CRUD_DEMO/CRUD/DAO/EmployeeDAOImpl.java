@@ -1,10 +1,11 @@
-package CRUD_DEMO.CRUD;
+package CRUD_DEMO.CRUD.DAO;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import CRUD_DEMO.CRUD.Entity.Employee;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.TypedQuery;
 

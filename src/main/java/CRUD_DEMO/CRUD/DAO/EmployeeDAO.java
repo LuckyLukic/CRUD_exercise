@@ -1,8 +1,11 @@
-package CRUD_DEMO.CRUD;
+package CRUD_DEMO.CRUD.DAO;
 
 import java.util.List;
 
-public interface EmployeeService {
+import CRUD_DEMO.CRUD.Entity.Employee;
+
+public interface EmployeeDAO {
+	
 	
 	List<Employee> findAll();
 	
